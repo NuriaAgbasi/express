@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posts</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 min-h-screen flex flex-col items-center">
+    <h1 class="text-4xl font-bold text-blue-600 mt-10">Posts</h1>
+
+    <form
+      id="add-post-form"
+      class="bg-white p-6 rounded-lg shadow-md mt-5 w-full max-w-md"
+    >
+      <div class="mb-4">
+        <label for="title" class="block text-gray-700 font-semibold mb-2"
+          >Title</label
+        >
+        <input
+          type="text"
+          id="title"
+          name="title"
+          class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          required
+        />
+      </div>
+      <button
+        type="submit"
+        class="w-full px-4 py-2 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 transition duration-300"
+      >
+        Add Post
+      </button>
+    </form>
+
+    <form
+      id="update-post-form"
+      class="bg-white p-6 rounded-lg shadow-md mt-5 w-full max-w-md hidden"
+    >
+      <div class="mb-4">
+        <label for="update-title" class="block text-gray-700 font-semibold mb-2"
+          >Update Title</label
+        >
+        <input
+          type="text"
+          id="update-title"
+          name="title"
+          class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          required
+        />
+        <input type="hidden" id="update-id" name="id" />
+      </div>
+      <button
+        type="submit"
+        class="w-full px-4 py-2 bg-yellow-500 text-white font-semibold rounded-lg shadow-md hover:bg-yellow-700 transition duration-300"
+      >
+        Update Post
+      </button>
+    </form>
+
+    <button
+      id="get-posts-btn"
+      class="mt-5 px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
+    >
+      Get Posts
+    </button>
+
+    <div
+      id="output"
+      class="mt-10 w-full max-w-2xl bg-white rounded-lg shadow-lg p-5"
+    >
+      <!-- Posts here -->
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

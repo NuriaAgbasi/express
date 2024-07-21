@@ -1,0 +1,2 @@
+Middleware functions are functions that have access to the request and response object.
+Middleware function takes in three things the request the response and next that calls the next piece of middleware in the stack  
